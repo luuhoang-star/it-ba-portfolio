@@ -650,34 +650,33 @@ tr:hover td { background-color: #fafbfc; }
       <div class="mermaid-box">
         <div class="mermaid">
 flowchart TD
-    subgraph G1 ["🟦 GIAI ĐOẠN 1: CHỌN ĐỒ & TỰ ĐỘNG GỢI Ý SIZE"]
-        A["1. Khách xem áo/quần nam"] --> B["2. Nhập Chiều cao & Cân nặng"]
-        B --> C{"Size gợi ý còn hàng?"}
-        C -- "✅ Còn hàng" --> D["Tự động chọn Size chuẩn (Vd: Size L)"]
-        C -- "❌ Hết hàng" --> E["Báo hết hàng & Gợi ý màu khác còn size L"]
+    subgraph G1 ["Giai doan 1: Chon do va Goi y Size"]
+        A["Khach xem san pham"] --> B["Nhap Chieu cao va Can nang"]
+        B --> C{"Size goi y con hang?"}
+        C -- "Con hang" --> D["Tu dong chon Size chuan"]
+        C -- "Het hang" --> E["Bao het hang, goi y mau khac"]
     end
 
-    subgraph G2 ["🟨 GIAI ĐOẠN 2: THANH TOÁN & GIỮ HÀNG"]
-        D --> F["3. Bấm 'Thanh toán ngay'"]
+    subgraph G2 ["Giai doan 2: Thanh toan va Giu hang"]
+        D --> F["Bam Thanh toan ngay"]
         E --> F
-        F --> G["Hệ thống KHÓA GIỮ HÀNG 15 phút (Soft-Lock)"]
-        G --> H["Hiển thị mã QR VNPay / MoMo"]
-        H --> I{"Khách thanh toán trong 15 phút?"}
+        F --> G["Khoa giu hang 15 phut Soft-Lock"]
+        G --> H["Hien thi ma QR VNPay / MoMo"]
+        H --> I{"Thanh toan trong 15 phut?"}
     end
 
-    subgraph G3 ["🟩 GIAI ĐOẠN 3: KẾT QUẢ ĐƠN HÀNG"]
-        I -- "✅ Thành công" --> J["Trừ kho vĩnh viễn"]
-        J --> K["Tự tạo mã vận đơn GHN & Nhắn SMS cho khách"]
-        
-        I -- "❌ Quá 15 phút không trả tiền" --> L["Hủy giao dịch & Tự trả hàng về kho cho khách khác"]
+    subgraph G3 ["Giai doan 3: Ket qua Don hang"]
+        I -- "Thanh cong" --> J["Tru kho vinh vien"]
+        J --> K["Tao ma van don GHN va SMS"]
+        I -- "Qua 15 phut" --> L["Huy don, tra hang ve kho"]
     end
 
-    style G1 fill:#eff6ff,stroke:#93c5fd,stroke-width:2px,color:#1e3a8a
-    style G2 fill:#fffbeb,stroke:#fde68a,stroke-width:2px,color:#92400e
-    style G3 fill:#f0fdf4,stroke:#bbf7d0,stroke-width:2px,color:#166534
-    style D fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e40af
-    style J fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#15803d
-    style L fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#991b1b
+    style G1 fill:#eff6ff,stroke:#93c5fd,stroke-width:2px
+    style G2 fill:#fffbeb,stroke:#fde68a,stroke-width:2px
+    style G3 fill:#f0fdf4,stroke:#bbf7d0,stroke-width:2px
+    style D fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style J fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    style L fill:#fee2e2,stroke:#dc2626,stroke-width:2px
         </div>
       </div>
     </div>
