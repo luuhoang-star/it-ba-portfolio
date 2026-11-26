@@ -1,65 +1,94 @@
-# 👔 HỒ SƠ NĂNG LỰC IT BUSINESS ANALYST (IT BA PORTFOLIO)
+# 👔 IT BA Portfolio: E-Commerce Fashion Sizing & Checkout System
+> **Dự án chuẩn đầu ra Vị trí Fresher / Junior IT Business Analyst**  
 > **Tác giả:** Lưu Văn Hoàng  
-> **Vị trí ứng tuyển:** IT Business Analyst / Junior Product Owner  
-> **Dự án thực chiến:** Nền tảng Thương mại Điện tử Bán lẻ Quần Áo Nam Đa Kênh (**NovaFashion Men's Apparel**)  
-> **Bộ công cụ & Phương pháp:** Agile / Scrum · BDD Gherkin · BPMN · Atlassian Jira & Confluence · Figma Wireframing · RTM Matrix
+> **Lĩnh vực (Domain):** E-Commerce / Thời trang nam (Men's Apparel)  
+> **Sản phẩm:** Single-Page Interactive BA Portfolio & System Specification  
 
 ---
 
-## 📌 1. TỔNG QUAN DỰ ÁN (PROJECT OVERVIEW)
+## 📌 1. Giới thiệu Dự án (Executive Summary)
 
-* **Bối cảnh:** NovaFashion là thương hiệu thời trang nam sở hữu 5 showroom và các kênh bán lẻ online (Website, TikTok Shop, Fanpage).
-* **Vấn đề cốt lõi (Pain Point):** Nam giới mua sắm có xu hướng chốt đơn nhanh nhưng ngại đo đạc số đo cơ thể bằng thước dây. Việc chọn size theo cảm tính dẫn đến **tỷ lệ đổi trả hàng lên tới 28%**, làm tăng chi phí vận hành logistics 2 chiều và gây sụt giảm lợi nhuận nghiêm trọng.
-* **Mục tiêu chiến lược (SMART Objectives):**
-  1. Xây dựng công cụ **Bảng tính & Gợi ý Size thông minh (Smart Size Advisor)** tự động tính toán từ Chiều cao + Cân nặng, hạ tỷ lệ đổi size xuống **dưới 9%**.
-  2. Triệt tiêu 100% tình trạng bán âm hàng bằng cơ chế **Soft-Lock giữ tồn kho trong 15 phút** khi khách thanh toán mã QR.
-  3. Tối ưu tỷ lệ bỏ giỏ hàng từ 35% xuống **dưới 18%** thông qua luồng Thanh toán 1 bước (One-step checkout) quét mã VNPAY-QR không cần đăng ký tài khoản.
+Dự án mô phỏng toàn diện quá trình phân tích và đặc tả yêu cầu nghiệp vụ cho tính năng **"Smart Size Advisor & Multi-variant Checkout System"** (Tư vấn chọn size thông minh & Đặt hàng biến thể thời trang nam) cho hệ sinh thái bán lẻ **NovaFashion Men**.
 
----
+### 🎯 Bài toán Kinh doanh (Business Problems):
+1. **Tỷ lệ đổi trả hàng do sai kích cỡ đạt 28%:** Nam giới mua online thường ngại đo số đo cơ thể hoặc bảng size quá phức tạp, dẫn đến chọn sai size (chi phí logistics đổi trả tốn kém).
+2. **Xung đột tồn kho biến thể (Overselling):** Khách đặt áo màu Đen - Size L nhưng kho thực tế đã hết do đơn hàng khác đang thanh toán chưa trừ kho.
+3. **Tỷ lệ bỏ giỏ hàng (Cart Abandonment) cao (68%):** Luồng chọn biến thể rườm rà, thiếu minh bạch về trạng thái còn/hết hàng theo từng SKU.
 
-## 📂 2. CẤU TRÚC BỘ TÀI LIỆU DỰ ÁN (PORTFOLIO ARTIFACTS)
-
-Dự án được phân rã thành 4 giai đoạn chuẩn mực theo quy trình phát triển phần mềm chuyên nghiệp:
-
-| Giai đoạn | Tên tài liệu chi tiết | Định dạng xem nhanh (Web & Markdown) | Trọng tâm nghiệp vụ |
-| :---: | :--- | :--- | :--- |
-| **BƯỚC 1** | **Quy trình Nghiệp vụ (Process Flow)** | 🌐 [Xem Giao diện HTML](buoc1_quy_trinh_nghiep_vu.html) <br> 📄 [Xem File Markdown](buoc1_quy_trinh_nghiep_vu.md) | Phân tích chênh lệch AS-IS vs TO-BE, Sơ đồ khối Flowchart 3 chặng trực quan. |
-| **BƯỚC 2** | **User Stories & Tiêu chí Gherkin AC** | 🌐 [Xem Giao diện HTML](buoc2_user_stories_gherkin.html) <br> 📄 [Xem File Markdown](buoc2_user_stories_gherkin.md) | 5 User Stories cốt lõi với kịch bản BDD Gherkin (`GIVEN - WHEN - THEN`), bao quát cả Happy Path và Edge Cases lỗi hết hàng. |
-| **BƯỚC 3** | **Bản phác thảo Giao diện (Wireframe)** | 🌐 [Xem Giao diện HTML](buoc3_wireframe_va_logic_giao_dien.html) <br> 📄 [Xem File Markdown](buoc3_wireframe_va_logic_giao_dien.md) | Bản vẽ Wireframe có đánh số chú thích `[1]` &rarr; `[6]`, Bảng ma trận biến thể dữ liệu SKU (Color x Size x Tồn kho) và bộ mô phỏng tính size trực tiếp. |
-| **BƯỚC 4** | **Kế hoạch Sprint Jira & Ma trận RTM** | 🌐 [Xem Giao diện HTML](buoc4_ke_hoach_sprint_va_ma_tran_rtm.html) <br> 📄 [Xem File Markdown](buoc4_ke_hoach_sprint_va_ma_tran_rtm.md) | Lộ trình 3 Sprint, Bảng Jira Scrum 4 cột, Ma trận truy vết yêu cầu (RTM) đối soát 100% và tiêu chuẩn chất lượng DoR/DoD. |
-| **TỔNG HỢP** | **Cổng Portfolio Web Tổng hợp (Single Page)** | 🌐 [index.html](index.html) | Trang web toàn diện tích hợp 9 thẻ điều hướng phục vụ trình chiếu khi đi phỏng vấn. |
+### 💡 Giải pháp Phân tích Nghiệp vụ (BA Solutions):
+- **Bước 1: Tối ưu Quy trình nghiệp vụ (Business Process Flowchart):** Tái thiết kế quy trình từ AS-IS sang TO-BE, bổ sung cơ chế kiểm tra biến thể và **Soft-lock tồn kho 15 phút** trong phiên checkout.
+- **Bước 2: Đặc tả User Stories & BDD Gherkin (Acceptance Criteria):** Chuẩn hóa User Story theo mẫu INVEST và tiêu chí nghiệm thu chi tiết `GIVEN - WHEN - THEN - AND - BUT` cho cả luồng Happy Path và Edge Cases (hết hàng, hủy phiên).
+- **Bước 3: Wireframe Chú thích & UI Logic (Interactive Prototype):** Xây dựng Wireframe trang chi tiết sản phẩm (PDP) với ma trận biến thể Màu sắc x Kích cỡ, kèm **Smart Size Advisor** tự động tính toán size dựa trên Chiều cao & Cân nặng.
+- **Bước 4: Kế hoạch Sprint & Ma trận RTM (Traceability & Delivery):** Lập Sprint Backlog 2 tuần, tiêu chuẩn Ready (DoR), tiêu chuẩn Done (DoD) và Ma trận truy xuất nguồn gốc yêu cầu (RTM) đảm bảo độ phủ 100% từ Business Goal đến Test Case.
 
 ---
 
-## 🛠️ 3. KỸ NĂNG VÀ NĂNG LỰC THỂ HIỆN (KEY BA COMPETENCIES)
+## 📂 2. Cấu trúc Dự án (Repository Structure)
 
-* **Business Process Modeling:** Thành thạo vẽ sơ đồ nghiệp vụ, phân tích điểm nghẽn (Bottlenecks) và tái thiết kế quy trình (BPR).
-* **Agile / Scrum Mastery:** Lập kế hoạch Sprint Backlog, ước lượng Story Points bằng Planning Poker, phân định rõ ràng Definition of Ready (DoR) và Definition of Done (DoD).
-* **Behavior-Driven Development (BDD):** Viết tiêu chí chấp nhận chuẩn mực bằng cú pháp Gherkin, tạo cầu nối hoàn hảo giữa BA, Lập trình viên (Dev) và Kiểm thử viên (Tester).
-* **Data-driven & Solution Architecture:** Hiểu sâu cấu trúc dữ liệu thương mại điện tử: Sự khác biệt giữa bảng Sản phẩm cha (`Products`) và bảng Biến thể SKU con (`Product_Variants`).
-* **Traceability & Quality Assurance:** Vận hành Ma trận RTM đảm bảo không một yêu cầu nào của doanh nghiệp bị bỏ sót.
+```text
+├── index.html        # Ứng dụng Web Single-Page tương tác hoàn chỉnh (Gộp Bước 1 -> 4 + Q&A)
+├── README.md         # Tài liệu tổng quan dự án & hồ sơ năng lực IT BA
+└── .gitignore        # Cấu hình bỏ qua các tệp không cần thiết
+```
 
----
-
-## 🚀 4. HƯỚNG DẪN KÍCH HOẠT GITHUB PAGES ĐỂ LẤY LINK PORTFOLIO ONLINE
-
-Sau khi đẩy dự án này lên tài khoản GitHub của bạn, bạn có thể biến nó thành trang web trực tuyến trong 30 giây:
-
-1. Mở Repository này trên GitHub.
-2. Vào mục **Settings** &rarr; Chọn thẻ **Pages** ở thanh menu bên trái.
-3. Tại mục **Branch**, chọn nhánh `main` (hoặc `master`) &rarr; Thư mục để mặc định là `/(root)` &rarr; Bấm **Save**.
-4. Chờ 1 - 2 phút, GitHub sẽ cấp cho bạn một đường link web cá nhân (ví dụ: `https://<ten-tai-khoan>.github.io/<ten-repo>/`).
-5. Đính kèm đường link này ngay đầu CV của bạn!
+Tất cả 4 bước được tích hợp trong **[index.html](file:///c:/Users/luuva/Herd/test/index.html)** với giao diện Dashboard hiện đại, tab navigation mượt mà và widget tương tác thực tế.
 
 ---
 
-## 📬 5. THÔNG TIN LIÊN HỆ
+## 📑 3. Nội dung Chi tiết 4 Bước Phân tích (Detailed Artifacts)
 
-* **Ứng viên:** Lưu Văn Hoàng
-* **Vị trí mục tiêu:** IT Business Analyst / Junior Product Owner
-* **Địa điểm:** Hà Nội / TP. Hồ Chí Minh
-* **Email:** *(Cập nhật email của bạn tại đây)*
-* **LinkedIn:** *(Cập nhật link LinkedIn của bạn tại đây)*
+### 🔹 Bước 1: Business Process Flowchart (Sơ đồ Quy trình Nghiệp vụ)
+- Phân tích khoảng cách (Gap Analysis) AS-IS vs TO-BE.
+- Sơ đồ trực quan 3 giai đoạn bằng Mermaid.js:
+  1. *Giai đoạn Duyệt & Lựa chọn biến thể (PDP)*
+  2. *Giai đoạn Khóa tạm thời tồn kho (Cart & Checkout)*
+  3. *Giai đoạn Xử lý đơn & Cập nhật kho (Order Placement & Payment)*
+- Cơ chế **Soft-lock 15 phút** chống overselling khi có nhiều khách hàng cùng mua 1 SKU cuối cùng.
+
+### 🔹 Bước 2: User Stories & BDD Gherkin Acceptance Criteria
+- **US-01:** Lựa chọn biến thể Màu sắc & Kích cỡ (Color Swatch & Size Selector).
+- **US-02:** Tư vấn chọn size thông minh theo Chiều cao & Cân nặng (Smart Size Advisor).
+- **US-03:** Khóa tồn kho tạm thời khi vào bước Checkout (Inventory Soft-lock & Release).
+- Toàn bộ tiêu chí nghiệm thu được viết theo chuẩn **BDD (Behavior-Driven Development)** với từng dòng phân biệt `GIVEN`, `WHEN`, `THEN`, `AND`, `BUT` rõ ràng, sẵn sàng cho QA viết Automation Test.
+
+### 🔹 Bước 3: Wireframe Chú thích Kỹ thuật & Interactive Prototype
+- Chú thích UI specs từ `[1]` đến `[5]`:
+  - `[1]` Bộ sưu tập ảnh & Zoom chi tiết theo màu đã chọn.
+  - `[2]` Thông tin SKU, Giá niêm yết, Giá khuyến mãi và Huy hiệu tiết kiệm.
+  - `[3]` Color Swatches & Size Buttons với trạng thái Disable/Sold out trực quan.
+  - `[4]` Widget Trợ lý chọn size (Interactive: Nhập chiều cao, cân nặng -> Gợi ý size ngay lập tức).
+  - `[5]` Nút CTA "Thêm vào giỏ" & "Mua ngay" tự động vô hiệu hóa nếu SKU hết hàng.
+- **Demo tương tác thực tế (Live Interactive Demo):** Người dùng có thể click chọn màu, click chọn size, nhập số đo để thấy hệ thống tính size và cập nhật SKU `POLO-XANH-L`, tồn kho còn lại theo thời gian thực.
+
+### 🔹 Bước 4: Kế hoạch Sprint, Tiêu chuẩn DoR/DoD & Ma trận RTM
+- **Sprint Backlog:** Mô phỏng Scrum Board trực quan (To Do, In Progress, Code Review/QA, Done) cho Sprint 1 (2 tuần, 24 Story Points).
+- **Definition of Ready (DoR):** 6 điều kiện bắt buộc để Dev nhận việc vào Sprint.
+- **Definition of Done (DoD):** 7 tiêu chí kiểm duyệt để đóng User Story (Unit Test > 80%, Regression pass, Product Owner duyệt AC).
+- **Requirement Traceability Matrix (RTM):** Bảng ma trận ánh xạ 2 chiều từ Business Requirement (BR-01, BR-02, BR-03) sang Functional Req (FR), User Story (US), Wireframe ID và QA Test Case ID.
+
+### 🔹 Phần mở rộng: Sổ tay Phỏng vấn IT BA (Interview Preparation)
+- Trả lời chuẩn chỉ 4 câu hỏi phỏng vấn kinh điển về:
+  1. Sự khác nhau giữa AS-IS và TO-BE.
+  2. Cách xử lý khi PO và Lead Dev bất đồng ý kiến về Requirement.
+  3. Cách viết BDD Gherkin chuẩn và giá trị mang lại cho đội ngũ Test.
+  4. Quản lý Scope Creep trong quá trình chạy Sprint.
 
 ---
-*© 2026 Lưu Văn Hoàng. Toàn bộ tài liệu được xây dựng phục vụ mục đích ứng tuyển và chứng minh năng lực nghề nghiệp IT Business Analyst.*
+
+## 🚀 4. Hướng dẫn Mở và Trải nghiệm (How to Run)
+
+Không cần cài đặt backend phức tạp, chỉ cần trình duyệt web:
+
+1. Clone repository về máy:
+   ```bash
+   git clone https://github.com/luuhoang-star/it-ba-portfolio.git
+   ```
+2. Mở file `index.html` trực tiếp bằng trình duyệt Google Chrome, Edge hoặc Brave.
+3. Chuyển đổi giữa các tab ở thanh Header để khám phá tài liệu từ Tổng quan đến Bước 4.
+
+---
+
+## 👨‍💻 Thông tin Tác giả (Author Profile)
+- **Họ và tên:** Lưu Văn Hoàng
+- **Vị trí mục tiêu:** Fresher / Junior IT Business Analyst
+- **Kỹ năng cốt lõi:** Requirement Elicitation, Business Process Modeling (BPMN / Flowchart), Agile Scrum, User Story & BDD Gherkin Writing, Wireframing & UI/UX Logic, Traceability Matrix (RTM), SQL cơ bản, API Specification.
