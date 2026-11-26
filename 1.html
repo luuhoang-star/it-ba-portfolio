@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hồ sơ năng lực IT Business Analyst – Lưu Văn Hoàng | Dự án Nền tảng Thời trang E-Commerce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1e3a8a;
+  --primary-hover: #172554;
+  --primary-light: #eff6ff;
+  --accent: #0284c7;
+  --teal: #0f766e;
+  --teal-light: #f0fdfa;
+  --amber: #b45309;
+  --amber-light: #fffbeb;
+  --rose: #be123c;
+  --rose-light: #fff1f2;
+  --purple: #6d28d9;
+  --purple-light: #f5f3ff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+  color: var(--gray-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TOPBAR */
+.topbar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #fff;
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.avatar-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+.brand-info h1 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.brand-info p {
+  font-size: 11px;
+  color: #93c5fd;
+}
+.top-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+}
+.badge-role {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* NAV TABS */
+.nav-scroller {
+  background: #ffffff;
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  box-shadow: var(--shadow-sm);
+}
+.nav-tabs {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  padding: 0 24px;
+  gap: 4px;
+}
+.nav-tab {
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-tab:hover {
+  color: var(--primary);
+  background-color: var(--gray-50);
+}
+.nav-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background-color: transparent;
+}
+
+/* MAIN LAYOUT */
+.main-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 130px;
+  box-shadow: var(--shadow-sm);
+}
+.author-card {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 16px;
+}
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3a8a, #0284c7);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+.author-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+.author-title {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 2px;
+}
+.sidebar-nav-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+.side-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  color: var(--gray-700);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 4px;
+}
+.side-item:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.side-item.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+}
+.side-badge {
+  font-size: 11px;
+  background: var(--gray-100);
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+.spec-info-box {
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-top: 20px;
+  font-size: 12px;
+  border: 1px solid var(--gray-200);
+}
+.spec-info-box h4 {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.spec-list div {
+  display: flex;
+  justify-content: space-between;
+}
+.spec-list span { color: var(--gray-600); }
+.spec-list b { color: var(--gray-800); }
+
+/* CONTENT AREA */
+.content-area {
+  min-width: 0;
+}
+.page { display: none; }
+.page.active { display: block; animation: fadeIn 0.25s ease-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEADINGS & CARDS */
+.page-header {
+  margin-bottom: 24px;
+}
+.page-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+.page-desc {
+  font-size: 14px;
+  color: var(--gray-600);
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.card-header-styled {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-100);
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat-box {
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.stat-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  font-feature-settings: "tnum";
+}
+.stat-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+}
+.stat-note {
+  font-size: 12px;
+  margin-top: 8px;
+  font-weight: 500;
+  color: var(--teal);
+}
+
+/* TAGS */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.tag-blue { background: var(--primary-light); color: var(--primary); }
+.tag-teal { background: var(--teal-light); color: var(--teal); }
+.tag-amber { background: var(--amber-light); color: var(--amber); }
+.tag-rose { background: var(--rose-light); color: var(--rose); }
+.tag-purple { background: var(--purple-light); color: var(--purple); }
+.tag-gray { background: var(--gray-100); color: var(--gray-600); }
+
+/* TABLES */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+th {
+  background: var(--gray-50);
+  color: var(--gray-600);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-200);
+}
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: #fafbfc; }
+
+/* GHERKIN BOX */
+.gherkin-card {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: 18px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+.gherkin-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+.us-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.us-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.us-statement {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.gherkin-container {
+  background: var(--gray-50);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.gherkin-kw { font-weight: 700; color: var(--teal); }
+.gherkin-text { color: var(--gray-800); }
+
+/* FLOW DIAGRAM */
+.flow-diagram-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  overflow-x: auto;
+}
+.flow-sequence {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 850px;
+  padding-bottom: 12px;
+}
+.flow-node {
+  background: var(--primary-light);
+  border: 1.5px solid #bfdbfe;
+  color: var(--primary);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex: 1;
+  position: relative;
+}
+.flow-node.highlight {
+  background: var(--teal-light);
+  border-color: #99f6e4;
+  color: var(--teal);
+}
+.flow-arrow-icon {
+  color: var(--gray-400);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* WIREFRAME SIMULATOR */
+.wireframe-canvas {
+  background: #f8fafc;
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+.wf-browser-bar {
+  background: #0f172a;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 12px;
+}
+.wf-dots {
+  display: flex;
+  gap: 6px;
+}
+.wf-dot { width: 10px; height: 10px; border-radius: 50%; }
+.wf-url {
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: #cbd5e1;
+  flex: 1;
+  max-width: 400px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.wf-body {
+  background: #ffffff;
+  border: 1px solid var(--gray-300);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+}
+.fashion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.fashion-img-placeholder {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-radius: var(--radius-md);
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--gray-200);
+}
+.size-selector {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+.size-btn {
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--gray-300);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.15s;
+}
+.size-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.size-recommend-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin: 12px 0;
+  font-size: 12.5px;
+  color: #166534;
+}
+
+/* SPRINT BOARD */
+.sprint-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.sprint-col-box {
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+.sprint-header-col {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.sp-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  font-size: 13px;
+}
+.sp-card-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--gray-400);
+  margin-bottom: 4px;
+}
+.sp-card-title {
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+.sp-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .main-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+  .sprint-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fashion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .sprint-columns {
+    grid-template-columns: 1fr;
+  }
+  .topbar {
+    padding: 0 16px;
+  }
+  .top-meta {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="brand-group">
+    <div class="avatar-badge">VH</div>
+    <div class="brand-info">
+      <h1>Lưu Văn Hoàng · IT Business Analyst</h1>
+      <p>Hồ sơ Phân tích Nghiệp vụ Phần mềm (Case Study Portfolio)</p>
+    </div>
+  </div>
+  <div class="top-meta">
+    <span class="badge-role">Ứng tuyển: IT BA / Product Owner</span>
+    <span>Dự án: NovaFashion E-Commerce</span>
+    <span>Bộ công cụ: Jira · Confluence · Figma · Draw.io · Postman · SQL</span>
+  </div>
+</header>
+
+<!-- NAV TABS -->
+<div class="nav-scroller">
+  <nav class="nav-tabs">
+    <div class="nav-tab active" onclick="switchTab('overview')">📌 Tổng quan dự án</div>
+    <div class="nav-tab" onclick="switchTab('stakeholders')">👥 Các bên liên quan</div>
+    <div class="nav-tab" onclick="switchTab('process')">🔄 Quy trình nghiệp vụ (Flowchart)</div>
+    <div class="nav-tab" onclick="switchTab('brd')">📄 Yêu cầu nghiệp vụ (BRD)</div>
+    <div class="nav-tab" onclick="switchTab('frd')">⚙️ Yêu cầu chức năng (FRD)</div>
+    <div class="nav-tab" onclick="switchTab('stories')">📝 Câu chuyện người dùng (Gherkin AC)</div>
+    <div class="nav-tab" onclick="switchTab('wireframe')">🖼️ Bản phác thảo giao diện</div>
+    <div class="nav-tab" onclick="switchTab('sprint')">📋 Bảng tiến độ Sprint (Jira)</div>
+    <div class="nav-tab" onclick="switchTab('rtm')">🔗 Ma trận truy vết (RTM)</div>
+  </nav>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="author-card">
+      <div class="author-avatar">VH</div>
+      <div class="author-name">Lưu Văn Hoàng</div>
+      <div class="author-title">IT Business Analyst</div>
+      <p style="font-size: 11.5px; color: var(--gray-600); margin-top: 6px;">
+        Chuyên môn: E-Commerce, Phân tích yêu cầu, Đặc tả quy trình BPMN & Agile Scrum.
+      </p>
+    </div>
+
+    <div class="sidebar-nav-title">Mục lục hồ sơ</div>
+    <div class="side-item active" onclick="switchTab('overview'); highlightSide(this)">
+      <span>📌</span> Tổng quan dự án <span class="side-badge">Case Study</span>
+    </div>
+    <div class="side-item" onclick="switchTab('stakeholders'); highlightSide(this)">
+      <span>👥</span> Phân tích bên liên quan <span class="side-badge">RACI</span>
+    </div>
+    <div class="side-item" onclick="switchTab('process'); highlightSide(this)">
+      <span>🔄</span> Sơ đồ quy trình <span class="side-badge">AS-IS / TO-BE</span>
+    </div>
+    <div class="side-item" onclick="switchTab('brd'); highlightSide(this)">
+      <span>📄</span> Tài liệu BRD <span class="side-badge">Phạm vi</span>
+    </div>
+    <div class="side-item" onclick="switchTab('frd'); highlightSide(this)">
+      <span>⚙️</span> Chi tiết FRD <span class="side-badge">Quy tắc logic</span>
+    </div>
+    <div class="side-item" onclick="switchTab('stories'); highlightSide(this)">
+      <span>📝</span> User Stories & Gherkin <span class="side-badge">12 Stories</span>
+    </div>
+    <div class="side-item" onclick="switchTab('wireframe'); highlightSide(this)">
+      <span>🖼️</span> Wireframe & Gợi ý Size <span class="side-badge">UI/UX</span>
+    </div>
+    <div class="side-item" onclick="switchTab('sprint'); highlightSide(this)">
+      <span>📋</span> Kế hoạch Sprint Jira <span class="side-badge">3 Sprints</span>
+    </div>
+    <div class="side-item" onclick="switchTab('rtm'); highlightSide(this)">
+      <span>🔗</span> Ma trận truy vết RTM <span class="side-badge">100% Trace</span>
+    </div>
+
+    <div class="spec-info-box">
+      <h4>Thông số Dự án</h4>
+      <div class="spec-list">
+        <div><span>Ngành hàng:</span> <b>Thời trang & Quần áo</b></div>
+        <div><span>Khách hàng:</span> <b>NovaFashion Retail</b></div>
+        <div><span>Phương pháp:</span> <b>Agile / Scrum</b></div>
+        <div><span>Chu kỳ Sprint:</span> <b>2 tuần / Sprint</b></div>
+        <div><span>Thời gian BA:</span> <b>6 tuần hoàn thiện</b></div>
+        <div><span>Trạng thái:</span> <b style="color:var(--teal);">Sẵn sàng bàn giao Dev</b></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content-area">
+
+    <!-- PAGE 1: OVERVIEW -->
+    <section class="page active" id="page-overview">
+      <div class="page-header">
+        <h2 class="page-title">Tổng quan Dự án: NovaFashion E-Commerce Platform</h2>
+        <p class="page-desc">Giải pháp chuyển đổi số bán lẻ thời trang đa kênh — Phân tích bài toán kinh doanh thực tế.</p>
+      </div>
+
+      <!-- KEY STATS -->
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-number">30% &rarr; 9%</div>
+          <div class="stat-name">Giảm tỷ lệ đổi trả hàng do sai size</div>
+          <div class="stat-note">Nhờ tính năng Bảng tính Size thông minh</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">&lt; 1 Phút</div>
+          <div class="stat-name">Thời gian đẩy đơn sang đơn vị giao hàng</div>
+          <div class="stat-note">Tích hợp API tự động với GHN & GHTK</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-name">Đồng bộ tồn kho đa kênh theo thời gian thực</div>
+          <div class="stat-note">Triệt tiêu hoàn toàn tình trạng bán vượt tồn kho</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">12 Stories</div>
+          <div class="stat-name">Đặc tả chuẩn Gherkin BDD</div>
+          <div class="stat-note">Bàn giao hoàn chỉnh cho Dev & QA</div>
+        </div>
+      </div>
+
+      <!-- BUSINESS PROBLEM -->
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title"><span style="color:#2563eb;">■</span> Bài toán thực tế của Doanh nghiệp (Business Pain Points)</div>
+          <span class="status-pill tag-rose">Vấn đề cấp bách</span>
+        </div>
+        <p style="font-size: 13.5px; color: var(--gray-700); line-height: 1.8;">
+          <b>NovaFashion</b> là thương hiệu thời trang thiết kế sở hữu 5 showroom tại Hà Nội và TP.HCM. Trước khi triển khai dự án, doanh nghiệp vận hành bán hàng trên Fanpage và Livestream TikTok với quy trình thủ công:
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px;">
+          <div style="background:var(--gray-50); border-radius:8px; padding:14px; border:1px solid var(--gray-200);">
+            <div style="font-weight:700; color:var(--rose); margin-bottom:4px;">❌ Tỷ lệ đổi trả hàng cao kỷ lục (30%)</div>
+            <p style="font-size:12.5px; color:var(--gray-600);">
+              Khách mua online chọn sai kích cỡ (Size S/M/L/XL) do bảng size dạng ảnh chung chung, không phản ánh phom dáng chuẩn theo cân nặng và chiều cao. Chi phí hoàn hàng 2 chiều gây thâm hụt nặng lợi nhuận.
+            </p>
+          </div>
+          <div style="background:var(--gray-50); border-radius:8px; padding:14px; border:1px solid var(--gray-200);">
+            <div style="font-weight:700; color:var(--rose); margin-bottom:4px;">❌ Lệch tồn kho ma trận (Color x Size)</div>
+            <p style="font-size:12.5px; color:var(--gray-600);">
+              Quần áo có biến thể phức tạp (Ví dụ: Áo Sơ mi Trắng - Size M hết tại showroom nhưng trên web vẫn cho đặt). Nhân viên phải gọi điện xin lỗi hủy đơn, tỷ lệ mất khách trung thành lên đến 22%.
+            </p>
+          </div>
+          <div style="background:var(--gray-50); border-radius:8px; padding:14px; border:1px solid var(--gray-200);">
+            <div style="font-weight:700; color:var(--rose); margin-bottom:4px;">❌ Tỷ lệ bỏ giỏ hàng cao (38%)</div>
+            <p style="font-size:12.5px; color:var(--gray-600);">
+              Quy trình thanh toán rườm rà bắt buộc tạo tài khoản; không hỗ trợ quét mã QR chuyển khoản tức thì (VNPay / MoMo) khiến khách hàng lười điền số thẻ và rời bỏ website.
+            </p>
+          </div>
+          <div style="background:var(--gray-50); border-radius:8px; padding:14px; border:1px solid var(--gray-200);">
+            <div style="font-weight:700; color:var(--rose); margin-bottom:4px;">❌ Tắc nghẽn đóng gói & giao vận</div>
+            <p style="font-size:12.5px; color:var(--gray-600);">
+              Nhân viên chép tay thông tin địa chỉ từ tin nhắn sang phần mềm giao hàng, tỷ lệ sai sót địa chỉ giao vận đạt 6.5%, làm chậm tiến độ giao hàng cho khách.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT GOALS -->
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title"><span style="color:#0f766e;">■</span> Mục tiêu Dự án (SMART Business Objectives)</div>
+          <span class="status-pill tag-teal">KPI Đo lường</span>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Mã mục tiêu</th>
+                <th>Mục tiêu chiến lược</th>
+                <th>Chỉ số đo lường (KPI)</th>
+                <th>Thời hạn đạt được</th>
+                <th>Giải pháp BA đề xuất</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>BO-01</b></td>
+                <td>Giảm thiểu chi phí hoàn trả hàng ngành may mặc</td>
+                <td>Hạ tỷ lệ đổi size từ 30% xuống &lt; 10%</td>
+                <td>3 tháng sau Go-live</td>
+                <td>Xây dựng công cụ Bảng gợi ý Size thông minh (Smart Size Advisor) theo thông số cơ thể</td>
+              </tr>
+              <tr>
+                <td><b>BO-02</b></td>
+                <td>Đồng bộ tồn kho thời trang chính xác 100%</td>
+                <td>0% đơn hàng bị hủy do âm kho biến thể</td>
+                <td>Ngay khi triển khai</td>
+                <td>Tích hợp cơ chế khóa tạm tồn kho (Soft Lock Inventory) 15 phút khi khách bắt đầu thanh toán</td>
+              </tr>
+              <tr>
+                <td><b>BO-03</b></td>
+                <td>Tối ưu tỷ lệ chuyển đổi giỏ hàng (Conversion Rate)</td>
+                <td>Giảm tỷ lệ bỏ giỏ hàng xuống &lt; 18%</td>
+                <td>60 ngày</td>
+                <td>Cung cấp luồng Thanh toán 1 trang (One-step Checkout), mua nhanh không cần đăng nhập & quét mã QR tức thì</td>
+              </tr>
+              <tr>
+                <td><b>BO-04</b></td>
+                <td>Tự động hóa luồng giao vận</td>
+                <td>Tự động hóa 100% việc tạo mã vận đơn</td>
+                <td>Ngay khi Go-live</td>
+                <td>Tích hợp trực tiếp Open API của Giao Hàng Nhanh (GHN) và Giao Hàng Tiết Kiệm (GHTK)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: STAKEHOLDERS -->
+    <section class="page" id="page-stakeholders">
+      <div class="page-header">
+        <h2 class="page-title">Phân tích các Bên liên quan (Stakeholder Analysis)</h2>
+        <p class="page-desc">Ma trận vai trò, mức độ ảnh hưởng và kế hoạch quản trị kỳ vọng dự án.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title">Ma trận Quyền lực & Mức độ Quan tâm (Power - Interest Grid)</div>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Bên liên quan</th>
+                <th>Vai trò trong dự án</th>
+                <th>Quyền hạn (Power)</th>
+                <th>Quan tâm (Interest)</th>
+                <th>Mối bận tâm cốt lõi</th>
+                <th>Chiến lược quản trị của BA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Giám đốc Kinh doanh (Business Owner)</b></td>
+                <td>Product Owner (PO) / Nhà tài trợ</td>
+                <td><span class="tag tag-rose">Rất cao</span></td>
+                <td><span class="tag tag-rose">Rất cao</span></td>
+                <td>Doanh thu tăng trưởng, ROI dự án, tỷ lệ hủy đơn hàng giảm</td>
+                <td><b>Phối hợp chặt chẽ:</b> Báo cáo tiến độ Sprint hằng tuần, Demo bản mẫu sớm để lấy phản hồi nghiệm thu</td>
+              </tr>
+              <tr>
+                <td><b>Quản lý Kho & Logistics</b></td>
+                <td>Chuyên gia nghiệp vụ (SME)</td>
+                <td><span class="tag tag-amber">Trung bình</span></td>
+                <td><span class="tag tag-rose">Rất cao</span></td>
+                <td>Đơn hàng in phiếu đóng gói nhanh, quét mã vạch SKU chuẩn xác</td>
+                <td><b>Lấy ý kiến & Tham vấn:</b> Phỏng vấn sâu quy trình đóng gói tại kho, thiết kế màn hình xuất phiếu in đơn tiện lợi</td>
+              </tr>
+              <tr>
+                <td><b>Kế toán trưởng</b></td>
+                <td>Chuyên gia tài chính</td>
+                <td><span class="tag tag-rose">Cao</span></td>
+                <td><span class="tag tag-amber">Trung bình</span></td>
+                <td>Đối soát tiền về từ cổng thanh toán và COD minh bạch, chuẩn xác</td>
+                <td><b>Thỏa mãn yêu cầu:</b> Đặc tả chi tiết cơ chế xuất hóa đơn VAT điện tử và báo cáo đối soát doanh thu tự động</td>
+              </tr>
+              <tr>
+                <td><b>Trưởng nhóm Kỹ thuật (Tech Lead)</b></td>
+                <td>Chủ trì giải pháp kỹ thuật</td>
+                <td><span class="tag tag-rose">Cao</span></td>
+                <td><span class="tag tag-blue">Cao</span></td>
+                <td>Kiến trúc hệ thống mở rộng được, API thanh toán ổn định, bảo mật PCI-DSS</td>
+                <td><b>Hợp tác kỹ thuật:</b> Họp trao đổi FRD rõ ràng, chốt kỹ thuật API bên thứ 3 và thống nhất định dạng dữ liệu</td>
+              </tr>
+              <tr>
+                <td><b>Khách hàng mua quần áo (End Users)</b></td>
+                <td>Người dùng trực tiếp</td>
+                <td><span class="tag tag-gray">Thấp</span></td>
+                <td><span class="tag tag-rose">Rất cao</span></td>
+                <td>Dễ chọn size vừa vặn, thanh toán nhanh gọn không lỗi, giao hàng đúng hẹn</td>
+                <td><b>Thấu hiểu & Theo dõi:</b> Xây dựng Persona (chân dung khách hàng), thực hiện Usability Testing trên bản mẫu Wireframe</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: PROCESS FLOW -->
+    <section class="page" id="page-process">
+      <div class="page-header">
+        <h2 class="page-title">Mô hình hóa Quy trình Nghiệp vụ (BPMN / Flowchart)</h2>
+        <p class="page-desc">So sánh quy trình cũ (AS-IS) và quy trình đề xuất tối ưu (TO-BE) được mô hình hóa bởi BA.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title">Quy trình TO-BE: Đặt hàng thời trang & Gợi ý Size thông minh</div>
+          <span class="status-pill tag-teal">Quy trình chuẩn hóa</span>
+        </div>
+        <div class="flow-diagram-wrapper">
+          <div class="flow-sequence">
+            <div class="flow-node">
+              <b>1. Xem sản phẩm</b>
+              <div style="font-size:11px; color:var(--gray-600); margin-top:4px;">Chọn màu & Mở Bảng size</div>
+            </div>
+            <div class="flow-arrow-icon">&rarr;</div>
+            <div class="flow-node highlight">
+              <b>2. Nhập Chiều cao / Cân nặng</b>
+              <div style="font-size:11px; color:var(--teal); margin-top:4px;">Gợi ý Size chuẩn tự động</div>
+            </div>
+            <div class="flow-arrow-icon">&rarr;</div>
+            <div class="flow-node">
+              <b>3. Thêm vào giỏ</b>
+              <div style="font-size:11px; color:var(--gray-600); margin-top:4px;">Khóa tạm tồn kho 15p</div>
+            </div>
+            <div class="flow-arrow-icon">&rarr;</div>
+            <div class="flow-node highlight">
+              <b>4. Thanh toán 1 bước</b>
+              <div style="font-size:11px; color:var(--teal); margin-top:4px;">Quét QR VNPay/MoMo</div>
+            </div>
+            <div class="flow-arrow-icon">&rarr;</div>
+            <div class="flow-node">
+              <b>5. Tự tạo đơn GHN/GHTK</b>
+              <div style="font-size:11px; color:var(--gray-600); margin-top:4px;">Bắn SMS thông báo mã vận đơn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title">Bảng phân tích Khoảng cách (Gap Analysis: AS-IS vs TO-BE)</div>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Hạng mục nghiệp vụ</th>
+                <th>Quy trình hiện tại (AS-IS)</th>
+                <th>Quy trình số hóa mới (TO-BE)</th>
+                <th>Lợi ích mang lại cho Doanh nghiệp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Tư vấn kích cỡ sản phẩm</b></td>
+                <td>Khách tự ước lượng qua bảng ảnh hoặc nhắn tin chờ nhân viên trả lời (mất 15-30 phút).</td>
+                <td>Thuật toán tự động tính toán từ Chiều cao + Cân nặng + Tỷ lệ phom dáng, gợi ý size chuẩn trong 1 giây.</td>
+                <td>Khách chốt đơn tức thì, giảm 70% câu hỏi tư vấn size cho nhân viên CSKH.</td>
+              </tr>
+              <tr>
+                <td><b>Đồng bộ dữ liệu Tồn kho</b></td>
+                <td>Ghi sổ Excel cuối ngày, showroom bán hết nhưng kho web không biết.</td>
+                <td>Cập nhật Real-time qua cơ sở dữ liệu tập trung. Tự động mờ nút chọn size khi hết hàng.</td>
+                <td>Xóa bỏ 100% tình trạng hủy đơn do thiếu hàng.</td>
+              </tr>
+              <tr>
+                <td><b>Xử lý đơn giao hàng</b></td>
+                <td>Nhân viên kho chép tay địa chỉ vào ứng dụng shipper, dễ sai tên quận/huyện.</td>
+                <td>Hệ thống gọi API GHN tự động tính cước theo định vị địa chỉ và sinh mã vận đơn in ngay.</td>
+                <td>Rút ngắn thời gian đóng gói từ 12 phút xuống còn 1.5 phút/đơn.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: BRD -->
+    <section class="page" id="page-brd">
+      <div class="page-header">
+        <h2 class="page-title">Tài liệu Yêu cầu Nghiệp vụ (BRD - Business Requirements Document)</h2>
+        <p class="page-desc">Đặc tả phạm vi dự án, ranh giới hệ thống và các yêu cầu phi chức năng chuẩn quốc tế.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title">Phạm vi Dự án (Project Scope: In-Scope vs Out-of-Scope)</div>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+          <div style="background:var(--teal-light); border:1px solid #99f6e4; border-radius:var(--radius-md); padding:16px;">
+            <div style="font-weight:700; color:var(--teal); margin-bottom:8px;">✅ Trong phạm vi triển khai (IN-SCOPE - Phase 1)</div>
+            <ul style="font-size:13px; color:var(--gray-700); padding-left:18px; line-height:1.8;">
+              <li>Cổng thông tin mua sắm Web Responsive (Mobile, Tablet, Desktop).</li>
+              <li>Quản lý ma trận biến thể quần áo (Size x Màu sắc x Tồn kho thực tế).</li>
+              <li>Bộ công cụ tính và gợi ý Size thông minh cho khách hàng.</li>
+              <li>Luồng thanh toán một trang (One-page Checkout) tích hợp Cổng VNPay & MoMo.</li>
+              <li>Tự động hóa đồng bộ vận đơn với Giao Hàng Nhanh (GHN API).</li>
+              <li>Hệ thống gửi tin nhắn SMS / Email Brandname xác nhận đơn hàng tức thì.</li>
+            </ul>
+          </div>
+          <div style="background:var(--rose-light); border:1px solid #fecdd3; border-radius:var(--radius-md); padding:16px;">
+            <div style="font-weight:700; color:var(--rose); margin-bottom:8px;">⛔ Ngoài phạm vi triển khai (OUT-OF-SCOPE - Để dành Phase 2)</div>
+            <ul style="font-size:13px; color:var(--gray-700); padding-left:18px; line-height:1.8;">
+              <li>Ứng dụng di động chuyên biệt (Mobile App iOS / Android native).</li>
+              <li>Tính năng thử đồ ảo thời gian thực qua camera AI (Virtual Fitting Room AR).</li>
+              <li>Bán hàng xuyên biên giới đa ngôn ngữ và thanh toán ngoại tệ quốc tế.</li>
+              <li>Phân hệ sàn thương mại điện tử đa người bán (Multi-vendor marketplace).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title">Yêu cầu Phi chức năng (Non-Functional Requirements - NFRs)</div>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Tiêu chí NFR</th>
+                <th>Yêu cầu kỹ thuật chi tiết</th>
+                <th>Mục đích nghiệp vụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Hiệu năng (Performance)</b></td>
+                <td>Thời gian tải trang danh mục và ảnh thời trang &le; 1.8 giây trên đường truyền 4G. Thời gian tính gợi ý size &le; 200ms.</td>
+                <td>Ngăn ngừa khách hàng mất kiên nhẫn thoát trang web do ảnh quần áo chất lượng cao quá nặng.</td>
+              </tr>
+              <tr>
+                <td><b>Bảo mật (Security)</b></td>
+                <td>Tuân thủ chuẩn bảo mật thanh toán thẻ quốc tế PCI-DSS. Mã hóa mật khẩu chuẩn Bcrypt. Toàn bộ kết nối sử dụng HTTPS với chứng chỉ SSL chuẩn TLS 1.3.</td>
+                <td>Bảo vệ an toàn thông tin thanh toán và dữ liệu cá nhân của khách hàng.</td>
+              </tr>
+              <tr>
+                <td><b>Khả năng chịu tải (Scalability)</b></td>
+                <td>Hệ thống chịu tải tối thiểu 15.000 người dùng đồng thời (CCU) trong các đợt Flash Sale / Black Friday mà không bị sập hay treo giỏ hàng.</td>
+                <td>Đảm bảo doanh thu tối đa trong các chiến dịch khuyến mãi giờ vàng của thương hiệu thời trang.</td>
+              </tr>
+              <tr>
+                <td><b>Tính sẵn sàng (Availability)</b></td>
+                <td>Cam kết chỉ số thời gian hoạt động SLA &ge; 99.9% (Tổng thời gian gián đoạn không quá 8.76 giờ trong cả năm).</td>
+                <td>Đảm bảo website luôn trực tuyến 24/7 để tiếp nhận đơn hàng xuyên đêm.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: FRD -->
+    <section class="page" id="page-frd">
+      <div class="page-header">
+        <h2 class="page-title">Yêu cầu Chức năng & Quy tắc Nghiệp vụ (FRD & Business Rules)</h2>
+        <p class="page-desc">Đặc tả các quy tắc xử lý dữ liệu chặt chẽ hỗ trợ lập trình viên (Dev) và kiểm thử (QA).</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div class="card-title">Quy tắc Nghiệp vụ Phân hệ Thời trang (Business Rules)</div>
+          <span class="status-pill tag-blue">Đặc tả logic</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="background:var(--gray-50); border-left:4px solid var(--primary); padding:12px 16px; border-radius:0 8px 8px 0;">
+            <b style="color:var(--primary);">BR-FASHION-01 (Ma trận biến thể Size x Màu):</b> 
+            Mỗi sản phẩm thời trang có thể có nhiều màu sắc, mỗi màu sắc gồm nhiều kích thước (Size XS, S, M, L, XL, XXL). Tồn kho được quản lý độc lập theo từng mã SKU con (Ví dụ: `AO-SOM-TRANG-M`). Khi một kích thước của một màu cụ thể hết hàng, hệ thống phải tự động gạch chéo mờ nút kích cỡ đó và không cho thêm vào giỏ.
+          </div>
+          <div style="background:var(--gray-50); border-left:4px solid var(--teal); padding:12px 16px; border-radius:0 8px 8px 0;">
+            <b style="color:var(--teal);">BR-FASHION-02 (Logic Bảng gợi ý Size thông minh):</b> 
+            Khi khách hàng nhập Chiều cao (cm) và Cân nặng (kg), hệ thống áp dụng công thức tính chỉ số BMI kết hợp phom dáng sản phẩm:
+            <ul style="margin-top:6px; padding-left:20px; font-size:12.5px;">
+              <li>Nếu phom Regular-fit: 1m60-1m68, 55-62kg &rarr; Gợi ý Size M.</li>
+              <li>Nếu phom Slim-fit: Tự động cộng biên độ dự phòng 1 bậc nếu cân nặng nằm ở cận trên của khoảng size.</li>
+              <li>Độ sai số đề xuất hiển thị minh bạch cho khách hàng (Ví dụ: "Độ chuẩn xác 92% dựa trên phản hồi của 450 khách hàng có vóc dáng tương tự").</li>
+            </ul>
+          </div>
+          <div style="background:var(--gray-50); border-left:4px solid var(--amber); padding:12px 16px; border-radius:0 8px 8px 0;">
+            <b style="color:var(--amber);">BR-CART-03 (Khóa tạm tồn kho khi thanh toán - Soft Lock):</b> 
+            Khi khách hàng bấm vào nút "Tiến hành Thanh toán", hệ thống thực hiện Soft-lock số lượng mặt hàng trong kho trong đúng 15 phút. Nếu khách hàng quét mã QR thanh toán thành công, trừ kho vĩnh viễn. Nếu quá 15 phút chưa hoàn tất giao dịch, hệ thống tự động giải phóng tồn kho cho khách khác mua.
+          </div>
+          <div style="background:var(--gray-50); border-left:4px solid var(--rose); padding:12px 16px; border-radius:0 8px 8px 0;">
+            <b style="color:var(--rose);">BR-DISCOUNT-04 (Quy tắc áp dụng mã giảm giá):</b> 
+            Một đơn hàng chỉ được áp dụng tối đa 01 Mã giảm giá đơn hàng (Voucher) + 01 Mã miễn phí vận chuyển (Freeship). Hệ thống kiểm tra điều kiện giá trị đơn tối thiểu sau khi đã trừ các khuyến mãi sản phẩm trực tiếp.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: USER STORIES -->
+    <section class="page" id="page-stories">
+      <div class="page-header">
+        <h2 class="page-title">Câu chuyện Người dùng & Tiêu chí Chấp nhận (User Stories & Gherkin AC)</h2>
+        <p class="page-desc">Được viết theo chuẩn BDD (Behavior-Driven Development) với cú pháp Gherkin: Given - When - Then.</p>
+      </div>
+
+      <!-- STORY 1 -->
+      <div class="gherkin-card">
+        <div class="us-header">
+          <span class="us-code">US-001 · Sprint 1</span>
+          <span class="tag tag-rose">Ưu tiên cao nhất</span>
+        </div>
+        <div class="us-statement">
+          Là <b>Khách mua hàng online</b>, tôi muốn <b>nhập chiều cao và cân nặng để hệ thống tự gợi ý size quần áo chuẩn xác</b>, để <b>tôi tự tin chọn đúng size mà không sợ bị chật hay rộng khi nhận đồ</b>.
+        </div>
+        <div class="gherkin-container">
+          <div style="color:var(--gray-400); margin-bottom:4px;"># Kịch bản 1: Gợi ý size thành công khi thông số hợp lệ</div>
+          <div><span class="gherkin-kw">GIVEN</span> <span class="gherkin-text">Khách hàng đang ở trang chi tiết sản phẩm "Áo Thun Cotton Compact"</span></div>
+          <div><span class="gherkin-kw">AND</span> <span class="gherkin-text">Khách hàng mở cửa sổ "Tư vấn chọn size thông minh"</span></div>
+          <div><span class="gherkin-kw">WHEN</span> <span class="gherkin-text">Khách hàng nhập Chiều cao = "170 cm" và Cân nặng = "65 kg" và nhấn "Tính Size"</span></div>
+          <div><span class="gherkin-kw">THEN</span> <span class="gherkin-text">Hệ thống tính toán và làm nổi bật khuyến nghị: "Size L là lựa chọn hoàn hảo nhất cho bạn (Phom vừa vặn)"</span></div>
+          <div><span class="gherkin-kw">AND</span> <span class="gherkin-text">Nút kích thước "L" trên màn hình tự động được chọn sẵn</span></div>
+        </div>
+        <div class="gherkin-container" style="border-left-color: var(--amber);">
+          <div style="color:var(--gray-400); margin-bottom:4px;"># Kịch bản 2: Xử lý khi size gợi ý đã hết hàng trong kho</div>
+          <div><span class="gherkin-kw">GIVEN</span> <span class="gherkin-text">Hệ thống gợi ý Size "L" cho khách hàng</span></div>
+          <div><span class="gherkin-kw">BUT</span> <span class="gherkin-text">Size "L" màu "Trắng" đang có tồn kho = 0</span></div>
+          <div><span class="gherkin-kw">WHEN</span> <span class="gherkin-text">Kết quả tính toán hiển thị</span></div>
+          <div><span class="gherkin-kw">THEN</span> <span class="gherkin-text">Hệ thống hiển thị nhãn cảnh báo: "Size L vừa với bạn nhưng hiện đã tạm hết màu Trắng. Bạn có thể chọn màu Đen (còn hàng) hoặc để lại email nhận thông báo khi có hàng lại"</span></div>
+        </div>
+      </div>
+
+      <!-- STORY 2 -->
+      <div class="gherkin-card">
+        <div class="us-header">
+          <span class="us-code">US-002 · Sprint 1</span>
+          <span class="tag tag-rose">Ưu tiên cao nhất</span>
+        </div>
+        <div class="us-statement">
+          Là <b>Khách mua hàng</b>, tôi muốn <b>chọn linh hoạt Màu sắc và Kích thước sản phẩm trực tiếp trên một màn hình</b>, để <b>tôi dễ dàng xem ảnh thực tế của từng màu và tình trạng còn hàng trước khi mua</b>.
+        </div>
+        <div class="gherkin-container">
+          <div style="color:var(--gray-400); margin-bottom:4px;"># Kịch bản 1: Đổi màu sắc hiển thị đúng album ảnh thực tế</div>
+          <div><span class="gherkin-kw">GIVEN</span> <span class="gherkin-text">Khách hàng đang xem sản phẩm "Đầm Xòe Linen Hoa Nhí"</span></div>
+          <div><span class="gherkin-kw">WHEN</span> <span class="gherkin-text">Khách hàng chọn ô màu "Xanh Cốm"</span></div>
+          <div><span class="gherkin-kw">THEN</span> <span class="gherkin-text">Thư viện ảnh sản phẩm tự động cập nhật hiển thị toàn bộ ảnh mẫu mặc màu "Xanh Cốm"</span></div>
+          <div><span class="gherkin-kw">AND</span> <span class="gherkin-text">Các nút kích cỡ S, M, L cập nhật trạng thái còn/hết hàng theo đúng màu "Xanh Cốm"</span></div>
+        </div>
+      </div>
+
+      <!-- STORY 3 -->
+      <div class="gherkin-card">
+        <div class="us-header">
+          <span class="us-code">US-003 · Sprint 2</span>
+          <span class="tag tag-teal">Thanh toán</span>
+        </div>
+        <div class="us-statement">
+          Là <b>Khách hàng</b>, tôi muốn <b>thanh toán đơn hàng nhanh bằng mã QR VNPay / MoMo mà không cần đăng ký tài khoản rườm rà</b>, để <b>tôi có thể hoàn tất mua sắm chỉ trong vài giây</b>.
+        </div>
+        <div class="gherkin-container">
+          <div style="color:var(--gray-400); margin-bottom:4px;"># Kịch bản: Quét mã QR thanh toán thành công</div>
+          <div><span class="gherkin-kw">GIVEN</span> <span class="gherkin-text">Khách hàng ở trang thanh toán với giỏ hàng trị giá 499.000 ₫</span></div>
+          <div><span class="gherkin-kw">AND</span> <span class="gherkin-text">Khách hàng chọn phương thức "Thanh toán qua VNPay-QR"</span></div>
+          <div><span class="gherkin-kw">WHEN</span> <span class="gherkin-text">Mã QR động xuất hiện và khách hàng thực hiện chuyển tiền thành công trên App Ngân hàng</span></div>
+          <div><span class="gherkin-kw">THEN</span> <span class="gherkin-text">Webhook VNPay gửi tín hiệu xác nhận về hệ thống trong vòng 3 giây</span></div>
+          <div><span class="gherkin-kw">AND</span> <span class="gherkin-text">Màn hình tự động chuyển sang trang "Đặt hàng thành công", gửi mã tra cứu đơn hàng qua SMS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 7: WIREFRAME -->
+    <section class="page" id="page-wireframe">
+      <div class="page-header">
+        <h2 class="page-title">Bản phác thảo Giao diện & Trải nghiệm (Wireframe Simulation)</h2>
+        <p class="page-desc">Thiết kế Low-fi màn hình chi tiết sản phẩm thời trang tích hợp Bảng tư vấn Size thông minh.</p>
+      </div>
+
+      <div class="card">
+        <div class="wireframe-canvas">
+          <div class="wf-browser-bar">
+            <div class="wf-dots">
+              <div class="wf-dot" style="background:#ef4444;"></div>
+              <div class="wf-dot" style="background:#f59e0b;"></div>
+              <div class="wf-dot" style="background:#10b981;"></div>
+            </div>
+            <div class="wf-url">https://novafashion.vn/san-pham/ao-polo-classic-nam</div>
+          </div>
+          <div class="wf-body">
+            <div class="fashion-grid">
+              <!-- IMG -->
+              <div>
+                <div class="fashion-img-placeholder">
+                  <div style="font-size:36px; margin-bottom:10px;">👕</div>
+                  <div>Khung hiển thị Ảnh Áo Polo (Tỉ lệ 3:4 chuẩn thời trang)</div>
+                  <div style="font-size:11px; margin-top:6px; color:var(--gray-400);">Zoom chi tiết sợi vải khi rê chuột</div>
+                </div>
+                <div style="display:flex; gap:8px; margin-top:10px;">
+                  <div style="border:1px solid #2563eb; border-radius:4px; padding:6px; font-size:10px; color:#2563eb; font-weight:700;">Ảnh 1 (Mặt trước)</div>
+                  <div style="border:1px solid var(--gray-300); border-radius:4px; padding:6px; font-size:10px;">Ảnh 2 (Mặt sau)</div>
+                  <div style="border:1px solid var(--gray-300); border-radius:4px; padding:6px; font-size:10px;">Ảnh 3 (Cận cảnh cổ áo)</div>
+                </div>
+              </div>
+
+              <!-- INFO -->
+              <div>
+                <span class="tag tag-teal">Bán chạy nhất</span>
+                <h3 style="font-size: 20px; font-weight:800; margin: 8px 0 4px; color:var(--gray-900);">Áo Polo Nam Classic Pique Cotton Co Giãn 4 Chiều</h3>
+                <div style="font-size: 12px; color: var(--amber); margin-bottom: 12px;">⭐⭐⭐⭐⭐ (4.9 sao · 1.250 đánh giá đã mua hàng)</div>
+                <div style="font-size: 22px; font-weight:800; color:var(--primary); margin-bottom: 14px;">
+                  299.000 ₫ <span style="font-size:14px; text-decoration:line-through; color:var(--gray-400); font-weight:500;">450.000 ₫</span>
+                  <span class="tag tag-rose" style="margin-left:8px;">-33%</span>
+                </div>
+
+                <!-- COLOR SELECT -->
+                <div style="margin-bottom:12px;">
+                  <div style="font-size:12px; font-weight:700; color:var(--gray-700);">MÀU SẮC: <span style="color:var(--primary);">Xanh Navy</span></div>
+                  <div style="display:flex; gap:8px; margin-top:6px;">
+                    <div style="border:2px solid var(--primary); padding:4px 10px; border-radius:6px; font-size:11px; font-weight:700;">Xanh Navy ✓</div>
+                    <div style="border:1px solid var(--gray-300); padding:4px 10px; border-radius:6px; font-size:11px;">Trắng Sữa</div>
+                    <div style="border:1px solid var(--gray-300); padding:4px 10px; border-radius:6px; font-size:11px;">Đen Nhám</div>
+                  </div>
+                </div>
+
+                <!-- SIZE SELECT & ADVISOR -->
+                <div style="margin-bottom:14px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div style="font-size:12px; font-weight:700; color:var(--gray-700);">CHỌN KÍCH CỠ (SIZE):</div>
+                    <a href="javascript:void(0)" onclick="alert('Tính năng BA: Mở bảng tra cứu số đo chi tiết (Vai, Ngực, Dài áo)')" style="font-size:11.5px; color:var(--accent); font-weight:600; text-decoration:none;">📏 Bảng số đo chi tiết</a>
+                  </div>
+
+                  <div class="size-selector">
+                    <div class="size-btn">S</div>
+                    <div class="size-btn active">M</div>
+                    <div class="size-btn">L</div>
+                    <div class="size-btn">XL</div>
+                    <div class="size-btn" style="color:var(--gray-300); text-decoration:line-through; background:#f8fafc;" title="Hết hàng">XXL</div>
+                  </div>
+                </div>
+
+                <!-- SMART SIZE BOX -->
+                <div class="size-recommend-box">
+                  <div style="font-weight:700; display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                    💡 Tư vấn chọn Size chuẩn xác của bạn
+                  </div>
+                  <p style="font-size:11.5px; color:#15803d; line-height:1.5;">
+                    Bạn cao <b>1m68</b>, nặng <b>62kg</b>? &rarr; Gợi ý: <b>Size M</b> sẽ mặc vừa vặn tôn dáng nhất.
+                  </p>
+                </div>
+
+                <!-- CTA -->
+                <div style="display:flex; gap:10px; margin-top:16px;">
+                  <button style="flex:1; background:var(--primary); color:#fff; border:none; border-radius:8px; padding:12px; font-weight:700; font-size:13px; cursor:pointer;">
+                    🛒 THÊM VÀO GIỎ HÀNG
+                  </button>
+                  <button style="flex:1; background:#0f766e; color:#fff; border:none; border-radius:8px; padding:12px; font-weight:700; font-size:13px; cursor:pointer;">
+                    ⚡ MUA NGAY (1 CHẠM)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px; font-size:12px; color:var(--gray-400); border-top:1px solid var(--gray-200); padding-top:10px;">
+          <b>Ghi chú BA cho UI/UX Designer & Dev:</b> Trải nghiệm đặt hàng thời trang phải ưu tiên việc loại bỏ tâm lý e ngại sai size của khách hàng. Box gợi ý size phải nằm ngay dưới danh sách chọn size để tối đa tỷ lệ nhấn Mua ngay.
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 8: SPRINT BOARD -->
+    <section class="page" id="page-sprint">
+      <div class="page-header">
+        <h2 class="page-title">Bảng Tiến độ Agile Sprint (Jira Simulation)</h2>
+        <p class="page-desc">Mô phỏng bảng quản lý tiến độ thực tế theo phương pháp Scrum — Sprint 2.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <div>
+            <span style="font-size:14px; font-weight:700; color:var(--gray-900);">Sprint 2: Thanh toán & Tích hợp Vận chuyển</span>
+            <div style="font-size:11.5px; color:var(--gray-400);">Thời gian: 2 tuần · Vận tốc cam kết: 36 Story Points</div>
+          </div>
+          <span class="status-pill tag-teal">Đang đúng hạn (On Track)</span>
+        </div>
+
+        <div class="sprint-columns">
+          <!-- TODO -->
+          <div class="sprint-col-box">
+            <div class="sprint-header-col">VIỆC CẦN LÀM (TODO) <span>3</span></div>
+            <div class="sp-card">
+              <div class="sp-card-id">NF-104</div>
+              <div class="sp-card-title">Thiết lập chính sách tích điểm thành viên khi mua hàng</div>
+              <div class="sp-card-footer"><span class="tag tag-gray">Loyalty</span><span class="tag tag-blue">5 SP</span></div>
+            </div>
+            <div class="sp-card">
+              <div class="sp-card-id">NF-105</div>
+              <div class="sp-card-title">Màn hình đánh giá sản phẩm kèm ảnh feedback người mua</div>
+              <div class="sp-card-footer"><span class="tag tag-gray">Review</span><span class="tag tag-blue">3 SP</span></div>
+            </div>
+            <div class="sp-card">
+              <div class="sp-card-id">NF-106</div>
+              <div class="sp-card-title">Thông báo đẩy khi đơn hàng bắt đầu được giao</div>
+              <div class="sp-card-footer"><span class="tag tag-gray">Notification</span><span class="tag tag-blue">2 SP</span></div>
+            </div>
+          </div>
+
+          <!-- IN PROGRESS -->
+          <div class="sprint-col-box">
+            <div class="sprint-header-col">ĐANG XỬ LÝ (IN PROGRESS) <span>2</span></div>
+            <div class="sp-card" style="border-left:3px solid var(--primary);">
+              <div class="sp-card-id">NF-101</div>
+              <div class="sp-card-title">Tích hợp Webhook thanh toán VNPay-QR tức thì</div>
+              <div class="sp-card-footer"><span class="tag tag-teal">Thanh toán</span><span class="tag tag-blue">8 SP</span></div>
+            </div>
+            <div class="sp-card" style="border-left:3px solid var(--primary);">
+              <div class="sp-card-id">NF-102</div>
+              <div class="sp-card-title">Tự động đẩy đơn và sinh mã vận đơn qua API GHN</div>
+              <div class="sp-card-footer"><span class="tag tag-amber">Logistics</span><span class="tag tag-blue">8 SP</span></div>
+            </div>
+          </div>
+
+          <!-- CODE REVIEW / TESTING -->
+          <div class="sprint-col-box">
+            <div class="sprint-header-col">ĐANG KIỂM THỬ (QA / TEST) <span>2</span></div>
+            <div class="sp-card" style="border-left:3px solid var(--amber);">
+              <div class="sp-card-id">NF-098</div>
+              <div class="sp-card-title">Cơ chế Soft-lock giữ hàng tồn kho trong 15 phút</div>
+              <div class="sp-card-footer"><span class="tag tag-purple">Kho</span><span class="tag tag-blue">5 SP</span></div>
+            </div>
+            <div class="sp-card" style="border-left:3px solid var(--amber);">
+              <div class="sp-card-id">NF-099</div>
+              <div class="sp-card-title">Logic áp dụng mã Voucher giảm giá và Freeship</div>
+              <div class="sp-card-footer"><span class="tag tag-teal">Voucher</span><span class="tag tag-blue">5 SP</span></div>
+            </div>
+          </div>
+
+          <!-- DONE -->
+          <div class="sprint-col-box">
+            <div class="sprint-header-col">HOÀN TẤT (DONE) <span>3</span></div>
+            <div class="sp-card" style="border-left:3px solid var(--teal); opacity:0.85;">
+              <div class="sp-card-id">NF-091</div>
+              <div class="sp-card-title">Giao diện Trang chủ và Bộ lọc thời trang đa tầng</div>
+              <div class="sp-card-footer"><span class="tag tag-teal">Catalog</span><span class="tag tag-blue">5 SP</span></div>
+            </div>
+            <div class="sp-card" style="border-left:3px solid var(--teal); opacity:0.85;">
+              <div class="sp-card-id">NF-092</div>
+              <div class="sp-card-title">Bảng gợi ý Size thông minh theo Chiều cao / Cân nặng</div>
+              <div class="sp-card-footer"><span class="tag tag-teal">Size Feature</span><span class="tag tag-blue">5 SP</span></div>
+            </div>
+            <div class="sp-card" style="border-left:3px solid var(--teal); opacity:0.85;">
+              <div class="sp-card-id">NF-093</div>
+              <div class="sp-card-title">Đổi màu sắc sản phẩm tự động cập nhật album ảnh</div>
+              <div class="sp-card-footer"><span class="tag tag-teal">PDP</span><span class="tag tag-blue">3 SP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 9: RTM -->
+    <section class="page" id="page-rtm">
+      <div class="page-header">
+        <h2 class="page-title">Ma trận Truy vết Yêu cầu (RTM - Requirement Traceability Matrix)</h2>
+        <p class="page-desc">Minh chứng năng lực kiểm soát chất lượng của BA: Đảm bảo 100% mục tiêu kinh doanh đều được hiện thực hóa và kiểm thử.</p>
+      </div>
+
+      <div class="card">
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Mã Yêu cầu</th>
+                <th>Mục tiêu Kinh doanh (BO)</th>
+                <th>Yêu cầu Chức năng (FR)</th>
+                <th>User Story liên kết</th>
+                <th>Kịch bản Kiểm thử (Test Case)</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>REQ-01</b></td>
+                <td>BO-01: Giảm tỷ lệ hoàn trả do sai size</td>
+                <td>FR-SIZE-01: Bộ tính toán kích cỡ thông minh</td>
+                <td><span class="tag tag-blue">US-001</span></td>
+                <td><span class="tag tag-gray">TC-SIZE-001 &rarr; 003</span></td>
+                <td><span class="tag tag-teal">Đã nghiệm thu</span></td>
+              </tr>
+              <tr>
+                <td><b>REQ-02</b></td>
+                <td>BO-02: Đồng bộ tồn kho ma trận 100%</td>
+                <td>FR-STOCK-02: Quản lý SKU biến thể Color x Size</td>
+                <td><span class="tag tag-blue">US-002</span></td>
+                <td><span class="tag tag-gray">TC-STOCK-001 &rarr; 004</span></td>
+                <td><span class="tag tag-teal">Đã nghiệm thu</span></td>
+              </tr>
+              <tr>
+                <td><b>REQ-03</b></td>
+                <td>BO-03: Giảm tỷ lệ bỏ giỏ hàng &lt; 18%</td>
+                <td>FR-PAY-03: Thanh toán QR VNPay 1 chạm</td>
+                <td><span class="tag tag-blue">US-003</span></td>
+                <td><span class="tag tag-gray">TC-PAY-001 &rarr; 005</span></td>
+                <td><span class="tag tag-amber">Đang kiểm thử</span></td>
+              </tr>
+              <tr>
+                <td><b>REQ-04</b></td>
+                <td>BO-04: Tự động hóa tạo đơn vận chuyển</td>
+                <td>FR-SHIP-04: Tích hợp Open API Giao Hàng Nhanh</td>
+                <td><span class="tag tag-blue">US-004</span></td>
+                <td><span class="tag tag-gray">TC-SHIP-001 &rarr; 003</span></td>
+                <td><span class="tag tag-amber">Đang kiểm thử</span></td>
+              </tr>
+              <tr>
+                <td><b>REQ-05</b></td>
+                <td>BO-01: Nâng cao độ hài lòng sau mua</td>
+                <td>FR-RET-05: Cổng yêu cầu đổi size trong 7 ngày</td>
+                <td><span class="tag tag-blue">US-005</span></td>
+                <td><span class="tag tag-gray">TC-RET-001 &rarr; 002</span></td>
+                <td><span class="tag tag-blue">Kỳ Sprint 3</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+function switchTab(tabId) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // Remove active from nav tabs
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  // Remove active from side items
+  document.querySelectorAll('.side-item').forEach(s => s.classList.remove('active'));
+
+  // Show selected page
+  const page = document.getElementById('page-' + tabId);
+  if (page) page.classList.add('active');
+
+  // Match nav tab
+  const tabNames = ['overview','stakeholders','process','brd','frd','stories','wireframe','sprint','rtm'];
+  const idx = tabNames.indexOf(tabId);
+  if (idx !== -1) {
+    const navTabs = document.querySelectorAll('.nav-tab');
+    if (navTabs[idx]) navTabs[idx].classList.add('active');
+    const sideItems = document.querySelectorAll('.side-item');
+    if (sideItems[idx]) sideItems[idx].classList.add('active');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function highlightSide(el) {
+  document.querySelectorAll('.side-item').forEach(item => item.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
