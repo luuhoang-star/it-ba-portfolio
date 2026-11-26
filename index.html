@@ -650,25 +650,25 @@ tr:hover td { background-color: #fafbfc; }
       <div class="mermaid-box">
         <div class="mermaid">
 flowchart TD
-    subgraph G1 ["Giai doan 1: Chon do va Goi y Size"]
-        A["Khach xem san pham"] --> B["Nhap Chieu cao va Can nang"]
-        B --> C{"Size goi y con hang?"}
-        C -- "Con hang" --> D["Tu dong chon Size chuan"]
-        C -- "Het hang" --> E["Bao het hang, goi y mau khac"]
+    subgraph G1 ["Giai đoạn 1: Chọn đồ và Gợi ý Size"]
+        A["Khách xem sản phẩm"] --> B["Nhập Chiều cao và Cân nặng"]
+        B --> C{"Size gợi ý còn hàng?"}
+        C -- "Còn hàng" --> D["Tự động chọn Size chuẩn"]
+        C -- "Hết hàng" --> E["Báo hết hàng, gợi ý màu khác"]
     end
 
-    subgraph G2 ["Giai doan 2: Thanh toan va Giu hang"]
-        D --> F["Bam Thanh toan ngay"]
+    subgraph G2 ["Giai đoạn 2: Thanh toán và Giữ hàng"]
+        D --> F["Bấm Thanh toán ngay"]
         E --> F
-        F --> G["Khoa giu hang 15 phut Soft-Lock"]
-        G --> H["Hien thi ma QR VNPay / MoMo"]
-        H --> I{"Thanh toan trong 15 phut?"}
+        F --> G["Khóa giữ hàng 15 phút Soft-Lock"]
+        G --> H["Hiển thị mã QR VNPay / MoMo"]
+        H --> I{"Thanh toán trong 15 phút?"}
     end
 
-    subgraph G3 ["Giai doan 3: Ket qua Don hang"]
-        I -- "Thanh cong" --> J["Tru kho vinh vien"]
-        J --> K["Tao ma van don GHN va SMS"]
-        I -- "Qua 15 phut" --> L["Huy don, tra hang ve kho"]
+    subgraph G3 ["Giai đoạn 3: Kết quả Đơn hàng"]
+        I -- "Thành công" --> J["Trừ kho vĩnh viễn"]
+        J --> K["Tạo mã vận đơn GHN và SMS"]
+        I -- "Quá 15 phút" --> L["Hủy đơn, trả hàng về kho"]
     end
 
     style G1 fill:#eff6ff,stroke:#93c5fd,stroke-width:2px
