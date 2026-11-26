@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- Mermaid JS để hiển thị sơ đồ quy trình -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true, theme: 'default' });</script>
+<script>mermaid.initialize({ startOnLoad: false, theme: 'default' });</script>
 <style>
 :root {
   --primary: #1e3a8a;
@@ -1146,6 +1146,12 @@ function switchTab(tabId) {
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Re-render mermaid when Step 1 tab becomes visible
+  if (tabId === 'step1' && !window._mermaidRendered) {
+    window._mermaidRendered = true;
+    mermaid.run({ querySelector: '.mermaid' });
+  }
 }
 
 // Unified Simulator logic for Step 3
