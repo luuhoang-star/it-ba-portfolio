@@ -1,5 +1,5 @@
 # 👔 E-Commerce IT BA Portfolio: Smart Sizing & Multi-Variant Checkout
-> **Tác giả:** Lưu Văn Hoàng | **Vị trí:** Fresher / Junior IT Business Analyst  
+> **Tác giả:** Lưu Văn Hoàng | **Vị trí:** IT Business Analyst  
 > 🌐 **Live Demo (Xem trực tiếp trên web):** [https://luuhoang-star.github.io/it-ba-portfolio/](https://luuhoang-star.github.io/it-ba-portfolio/)  
 
 ---
@@ -35,5 +35,5 @@
 
 ## 👤 4. Thông tin Tác giả
 - **Họ và tên:** Lưu Văn Hoàng
-- **Mục tiêu:** Fresher / Junior IT Business Analyst
+- **Mục tiêu:** IT Business Analyst
 - **Kỹ năng cốt lõi:** Requirement Elicitation, Flowchart/BPMN, User Story & BDD Gherkin, Wireframing, Scrum/Agile, RTM Traceability.
